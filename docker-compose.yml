@@ -1,0 +1,9 @@
+services:
+  pizza-assistant:
+    build: .
+    # or, without building locally:
+    # image: ghcr.io/<your-username>/pizza-assistant:latest
+    container_name: pizza-assistant
+    restart: unless-stopped
+    ports:
+      - "8090:80"   # http://<ton-serveur>:8090
